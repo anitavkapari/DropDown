@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/lblName"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblName"
+        android:layout_toRightOf="@id/lblName"
+        android:hint="Enter ur name"
+        android:textSize="@dimen/text_size"
+        />
+
+    <TextView
+        android:id="@+id/lblPhone"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtName"
+        android:text="Phone"
+        android:textSize="@dimen/text_size" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lblPhone"
+        android:layout_toRightOf="@id/lblPhone"
+        android:hint="Enter ur Phone"
+        android:textSize="@dimen/text_size"
+        />
+
+    <TextView
+        android:id="@+id/lblCountry"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPhone"
+        android:text="Country"
+        android:textSize="@dimen/text_size" />
+
+   <Spinner
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/spnCountry"
+       android:layout_below="@+id/edtPhone"
+       android:layout_toRightOf="@+id/lblCountry"
+       >
+   </Spinner>
+    
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblState"
+        android:layout_below="@+id/lblCountry"
+        android:layout_marginTop="25dp"
+        android:text="State"
+        android:textSize="@dimen/text_size" />
+
+    <AutoCompleteTextView
+        android:id="@+id/atxtState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblState"
+        android:layout_below="@+id/spnCountry"
+
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblGender"
+        android:layout_below="@+id/atxtState"
+        android:layout_marginTop="25dp"
+        android:text="Gender"
+        android:textSize="@dimen/text_size" />
+
+    <RadioGroup
+        android:id="@+id/rdgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/atxtState"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/lblGender"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="@dimen/text_size"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/text_size"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblEducation"
+        android:layout_below="@+id/lblGender"
+        android:layout_marginTop="80dp"
+        android:text="Education"
+        android:textSize="@dimen/text_size" />
+
+    <CheckBox
+        android:id="@+id/chb10th"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="10th"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/rdgGender"
+        android:layout_toRightOf="@+id/lblEducation"/>
+
+    <CheckBox
+        android:id="@+id/chb12th"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="12th"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/rdgGender"
+        android:layout_toRightOf="@+id/chb10th"/>
+
+    <CheckBox
+        android:id="@+id/chbGD"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="GD"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/chb10th"
+        android:layout_toRightOf="@+id/lblEducation"/>
+
+
+    <CheckBox
+        android:id="@+id/chbPG"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="PG"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size"
+        android:layout_below="@+id/chb12th"
+        android:layout_toRightOf="@+id/chbGD"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Save" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+</RelativeLayout>
